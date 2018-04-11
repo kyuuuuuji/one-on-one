@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="robots" content="noindex, nofollow" />
+</head>
+
+<body>
+    <link rel="stylesheet" href="./index.css" type="text/css"></link>
+    <div>        
+        <p>
+            <i>依頼先</i>
+            <input type="text" name="forest" id="forest" required />
+        </p>
+        <p>
+            <i>メンター</i>
+            <input type="text" name="mentor" id="mentor" required />
+        </p>
+        <p>
+            <i>実施日数</i>
+            <input type="number" name="date_count" id="date_count" min="1" required />
+        </p>
+    </div>
+    <div>
+        <form action="" id="form" name="schedule">
+            <div id="schedules">
+            </div>
+            <input type="submit" name="submit-button" value="generate" />
+        </form>
+    </div>
+    <hr />
+    <div>
+        <p>subject</p>
+        <p><input id="result_subject" type="text" /></p>
+        <button class="copy" data-clipboard-target="#result_subject">copy to clipboard</button>
+    </div>
+        <div>
+        <p>content</p>
+        <p><textarea id="result_content" cols="70" rows="20"></textarea></p>
+        <button class="copy" data-clipboard-target="#result_content">copy to clipboard</button>
+    </div>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
+    <script src="./index.js"></script>
+</body>
+
+<div id="schedule" class="template">
+    <hr />
+    <p>
+        <i>メンティー</i>
+        <input type="text" name="mentee" id="mentee" required />
+    </p>
+    <p>
+        <i>日時</i>
+        <input type="date" name="day" id="day" required />
+    </p>
+    <p>
+        <i>開始時刻</i>
+        <input type="time" name="time" id="start_time" required />
+    </p>
+    <p>
+        <i>終了時刻</i>
+        <input type="time" name="time" id="end_time" required />
+    </p>
+
+    <p>
+        <i>会議室</i>
+        <select name="meeting_room" id="meeting_room">
+            <option value="true">要</option>
+            <option value="false">不要</option>
+        </select>
+    </p>
+</div>
+
+</html>
