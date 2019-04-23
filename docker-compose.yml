@@ -1,0 +1,11 @@
+version: '2'
+services:
+  app:
+    container_name: one-on-one
+    build: .
+    ports:
+      - "5000:8080"
+    volumes:
+      - .:/home/node/one-on-one
+    working_dir: /home/node/one-on-one
+    tty: true
