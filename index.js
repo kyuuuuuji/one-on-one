@@ -9,7 +9,6 @@ var needMeetingRoom
 var month
 var dayOfWeek
 
-var requestTitle
 var requestMessage
 
 
@@ -36,7 +35,6 @@ $(function () {
         forest = $('#forest').val()
         var message = ""
         needToReserve = false
-        requestTitle = ''
         requestMessage = ''
     $('#schedules').children('#schedule').each(function() {
             mentee = $(this).find('#mentee').val()
@@ -56,7 +54,6 @@ $(function () {
 
         console.log(needToReserve)
         if (needToReserve == true) {
-            requestTitle = '&依頼'
             requestMessage = '会議室の予約をお願いいたします。'
         }
 
@@ -68,7 +65,7 @@ $(function () {
 })
 
 function getMailSubject() {
-    return `【共有${requestTitle}】1on1面談_${month}月(${mentor})`
+    return `【共有&依頼】1on1面談(${mentor})`
 }
 
 function getHeaderTemplate() {
